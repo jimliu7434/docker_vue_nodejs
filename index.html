@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="app">
+        {{ message }}<br/>
+        {{ today }}
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.3/dist/vue.js"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            today: ''
+        },
+        created: function () {
+            let base = this;
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    base.today = xmlHttp.responseText;
+                }
+            }
+            xmlHttp.open("POST", '/', true); // true for asynchronous 
+            xmlHttp.send(null);
+        }
+    })
+</script>

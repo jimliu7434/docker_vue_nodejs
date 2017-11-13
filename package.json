@@ -1,0 +1,28 @@
+{
+  "name": "docker_vue_nodejs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimliu7434/docker_vue_nodejs.git"
+  },
+  "keywords": [
+    "vue",
+    "nodejs",
+    "docker"
+  ],
+  "author": "jim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimliu7434/docker_vue_nodejs/issues"
+  },
+  "homepage": "https://github.com/jimliu7434/docker_vue_nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}

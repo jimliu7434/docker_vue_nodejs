@@ -1,0 +1,11 @@
+version: "3"
+services:
+  receiver:
+    build: 
+      context: .
+      dockerfile: ./dockerFile
+    container_name: dockerTest20171113
+    ports: 
+      - "80:80"
+    environment: 
+      - NODE_ENV=dev

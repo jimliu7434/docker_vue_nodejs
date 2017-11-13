@@ -1,0 +1,15 @@
+##https://github.com/nodejs/docker-node/blob/master/README.md#how-to-use-this-image
+# specify the node base image with your desired version node:<version>
+FROM node:8.7.0
+
+# Create app folder
+RUN mkdir -p /var/app
+WORKDIR /var/app
+
+# Copy app files into app folder
+COPY . /var/app
+
+# npm install
+RUN ["npm", "install"]
+
+CMD node app.js
